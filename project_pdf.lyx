@@ -1,0 +1,1459 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+\size giant
+A Brief Look at the Mathematical Models of Long-run Economics Growth
+\end_layout
+
+\begin_layout Author
+Xiaoteng Zhang 
+\end_layout
+
+\begin_layout Date
+Nov.
+ - Dec.
+ 2022
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Economic growth is a very important concept in macroeconomics.
+ It can be defined as the increase or improvement in the inflation-adjusted
+ market value of the goods and services produced by an economy (also known
+ as 
+\shape italic
+GDP
+\shape default
+) over a certain period of time.
+ Since high economic growth would generally make a nation more prosperous,
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+When we say high economic growth here, we are referring strictly to the
+ amount of growth within an economy's capacity.
+ When the economic growth is too rapid, the economy will start to 
+\shape italic
+
+\begin_inset Quotes eld
+\end_inset
+
+overheat
+\shape default
+ 
+\begin_inset Quotes erd
+\end_inset
+
+, which will cause high rate of inflation, among many other undesirable
+ effects
+\end_layout
+
+\end_inset
+
+, which in turn would generally improve its citizens' standards of living.
+ It is for this reason that in the modern history, increasing the rate of
+ economic growth is almost the universal preoccupation of almost every country's
+ government regardless of the form of governance.
+\end_layout
+
+\begin_layout Standard
+However, the rate of economic growth can vary quite widely from one year
+ to the other, which poses a problem for government planning.
+ Therefore, if we can predict the rate of economic growth, it would be undoubted
+ly helpful for the government in terms of planning its government expenditure,
+ taxation, etc.
+ Currently, one of the most classic models that is used to predict long-run
+ economic growth is the 
+\series bold
+Solow–Swan model
+\series default
+ or 
+\series bold
+exogenous growth model.
+ 
+\series default
+Mathematically, this is an nonlinear system consisting of a single ordinary
+ differential equation that models the evolution of the per capita stock
+ of capital.
+ In the following sections, I will firstly introduce the model before going
+ on to explore the nonlinear dynamics of the system for two different versions
+ of the model (with increasing complexity)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Here, it is important to keep in mind that the versions of model explored
+ would not be exhaustive
+\end_layout
+
+\end_inset
+
+ as well as trying to compare the model to some real-world data that I was
+ able to collect online.
+ 
+\end_layout
+
+\begin_layout Section
+The Solow-Swan model with AK technology and constant labour growth rate
+\end_layout
+
+\begin_layout Standard
+It is worth mentioning before we go any further that we are measuring the
+ rate of economic growth by rate of capital accumulation here.
+ It is important to note that these two concepts are not the same yet they
+ are still deeply connected in the sense that the accumulation of capital
+ goods translates to investment and the production of more goods and services,
+ which should boost the income of the population and stimulate demand.
+ (In the other words, economic growth) 
+\end_layout
+
+\begin_layout Standard
+This version of the model is arguably the most basic form of the model,
+ but it will serve as a basis for our investigation going forward.
+ This version of the model is set up based on the following assumptions/conditio
+ns:
+\end_layout
+
+\begin_layout Enumerate
+Tbere is one good (
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+) produced by only one factor of production (
+\begin_inset Formula $K_{t}$
+\end_inset
+
+).
+ Therefore the resulting production function is 
+\begin_inset Formula $Y_{t}=F(K_{t})=AK_{t}$
+\end_inset
+
+, where A is an exogenous positive constant that represents the level of
+ technology.
+\end_layout
+
+\begin_layout Enumerate
+Saving is proportional to the aggregate income i.e.
+ 
+\begin_inset Formula $S_{t}=sY_{t}$
+\end_inset
+
+ where 
+\begin_inset Formula $s$
+\end_inset
+
+ denotes the exogeneous saving rate.
+\end_layout
+
+\begin_layout Enumerate
+Since the economy is closed, the change in the capital stock could be represente
+d as 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $K_{t}\prime$
+\end_inset
+
+ here is the same as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+dot{K
+\backslash
+textsubscript{t}}$
+\end_layout
+
+\end_inset
+
+, representing differentiation with respect to time
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $K_{t}\prime=sY_{t}-𝛿K_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $𝛿$
+\end_inset
+
+ is the rate of depreciation 
+\end_layout
+
+\begin_layout Enumerate
+In the context of the model, we consider population = labour.
+ That is to say that 
+\begin_inset Formula $n=\frac{L\prime_{t}}{L_{t}}$
+\end_inset
+
+, the constant population growth rate would equate to labour growth rate
+\end_layout
+
+\begin_layout Standard
+Since we are more interested in per-capita terms, we define a new variable
+ called the 
+\series bold
+capital-labour ratio
+\series default
+ 
+\begin_inset Formula $k_{t}=\frac{K_{t}}{L_{t}}$
+\end_inset
+
+.
+ Then we have 
+\begin_inset Formula $\frac{k_{t}\prime}{k_{t}}=\frac{K_{t}\prime}{K_{t}}-\frac{L_{t}\prime}{L_{t}}$
+\end_inset
+
+.
+ Then by some simple calculations that I would omit here, we get: 
+\begin_inset Formula 
+\[
+k_{t}\prime=(N-n)k_{t},N\equiv sA-𝛿
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This first order differential equation in 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ is the fundamental equation of the Solow-Swan model with a production function
+ which is linear in physical capital.
+ From this equation, we can plot the evolution of the capital of stock with
+ respect to time as shown in Figure 1 when the quantity 
+\begin_inset Formula $(N-n)$
+\end_inset
+
+ takes different signs.
+ We can notice that: 
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $N=n$
+\end_inset
+
+, regardless the initial condition, steady state has
+\series bold
+ zero growth
+\series default
+ in per-worker capital stock
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $N<n$
+\end_inset
+
+, we notice negative growth throughout, and the economy will converge in
+ the long-run to a per-worker capital stock equal to zero
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $N>n,$
+\end_inset
+
+we notice positive growth throughout, and the economy will approach an infinitel
+y large level of per-worker capital stock in the long run
+\end_layout
+
+\begin_layout Standard
+Obviously, the third senario will be the most favourable for an economy.
+ When we translate the condition 
+\begin_inset Formula $N>n$
+\end_inset
+
+ into plain english, it will state that the savings rate (adjusted by the
+ level of technology,
+\begin_inset Formula $sA$
+\end_inset
+
+) minus the depreciation rate of physical capital (
+\begin_inset Formula $𝛿$
+\end_inset
+
+) should be greater than the constant population growth rate (
+\begin_inset Formula $n).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graphs/Proposition_1.jpg
+	width 4in
+	rotateOrigin centerBottom
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Evolution of Capital for AK Technology and Constant Labour Growth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Solow-Swan model with AK technology and logistic labour growth rate
+\end_layout
+
+\begin_layout Standard
+In this section, we are going to be modifying the model for population growth
+ to complicate things a little bit.
+ The problem that we had with constant labour growth rate before is that
+ population would grow exponentially without any constraint.
+ Namely, the solution to 
+\begin_inset Formula $n=\frac{L\prime_{t}}{L_{t}}$
+\end_inset
+
+ is 
+\begin_inset Formula $L_{t}=L_{0}*e^{nt}$
+\end_inset
+
+.
+ Obviously, this model of population growth would not be realistic, which
+ is the reason why we are introducing the logistic equation for labour/populatio
+n growth:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This population growth model is discussed in depth at Page 22 in Strogatz.
+ To save the repetitiveness, I will just summarize the results here.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{L_{t}\prime}{L_{t}}=n-bL_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $n$
+\end_inset
+
+ is population growth rate as usual, 
+\begin_inset Formula $b$
+\end_inset
+
+ is a constant satisfying 
+\begin_inset Formula $n-bL_{t}>0$
+\end_inset
+
+.
+ This equation can also be written as 
+\begin_inset Formula $\frac{L_{t}\prime}{L_{t}}=n(1-\frac{L_{t}}{𝐊})$
+\end_inset
+
+ where 
+\begin_inset Formula $𝐊$
+\end_inset
+
+ denotes 
+\series bold
+carrying capacity
+\series default
+.
+ (i.e., the maximum population size of a biological species that can be sustained
+ by that specific environment.) Instead of solving this differential equation
+ analytically, we plot 
+\begin_inset Formula $L_{t}\prime$
+\end_inset
+
+ against 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ like we have done many times as shown in Figure 2.
+\series bold
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Graphs/Logistic Model.png
+	width 9cm
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dynamics of Logistic Population Growth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\series default
+This figure shows that no matter where the population starts from, the populatio
+n converges eventually to the carry capacity as t goes to infinity.
+ (In the other words, K in the graph is a stable fixed point.) Therefore,
+ incorporating the symbols and equations that we have introduced a bit earlier,
+ we get the following system of equation to represent the AK technology
+ model with logistic labour growth rate: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+k_{t}\prime & =\left[N-(n-bL_{t})\right]k_{t}\\
+L_{t}\prime & =L_{t}(n-bL_{t})
+\end{cases}(*)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where if we are given the initial condition 
+\begin_inset Formula $(k_{0}>0,L_{0}>0)$
+\end_inset
+
+ we can get a unique solution 
+\begin_inset Formula $(k_{t},L_{t})$
+\end_inset
+
+.
+ In the next section, we are going to investigate the steady state (see
+ the definition a bit later) and some of the dynamics of the model after
+ we made the switch to the logistic labour growth.
+ 
+\end_layout
+
+\begin_layout Section
+Steady state and dynamics of model with logistic labour growth rate
+\end_layout
+
+\begin_layout Standard
+We start off by defining what is the steady state of the model.
+ A steady state in an economy refers to the situation where the growth of
+ population/labour and per capita physical capital are both zero.
+ After reading this definition, it is natural to make a connection with
+ something we learned early on in class.
+ And yes indeed, steady state in this context is just a fancier name for
+ fixed point of two-dimension system.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For more detailed discussion on this, please refer to Section 6.3 in Strogatz.
+\end_layout
+
+\end_inset
+
+We denote the steady state values of this system as 
+\begin_inset Formula $k_{*}$
+\end_inset
+
+and 
+\begin_inset Formula $L_{*}$
+\end_inset
+
+.
+ From the first glance, it is evident that 
+\begin_inset Formula $(k_{t},L_{t})=(0,0)$
+\end_inset
+
+ is always a fixed point.
+ However, in this context, we will 
+\series bold
+disregard
+\series default
+ this solution as this is economically meaningless.
+ After all, who would like to study the dynamics of an economy that has
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ workers in it ? We would probably be better off spending our time elsewhere.
+ After excluding this not-so-exciting solution, we have another pair of
+ solution that satisfies: 
+\begin_inset Formula 
+\[
+\begin{cases}
+Nk_{t} & =0\\
+n-bL_{t} & =0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solving this system of the equation, we see that if 
+\begin_inset Formula $N\neq0$
+\end_inset
+
+, we wouldn't obtain any non-trivial steady state as the only way to satisfy
+ the first equation is to make 
+\begin_inset Formula $k_{t}=0$
+\end_inset
+
+.
+ On the other hand, we see that if 
+\begin_inset Formula $N=0$
+\end_inset
+
+, 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ can take on any value to satisfy the first equation and along with 
+\begin_inset Formula $L_{t}=\frac{n}{b}$
+\end_inset
+
+, a non-trivial fixed point could be obtained.
+ To summarize, the economy has 
+\series bold
+no
+\series default
+ steady state when 
+\begin_inset Formula $N\neq0$
+\end_inset
+
+ and has 
+\series bold
+infinite
+\series default
+ stead state when 
+\begin_inset Formula $N=0$
+\end_inset
+
+.
+ Now, the legitimate question that we can ask ourselves is that what kind
+ of fixed point do we have when 
+\begin_inset Formula $N\neq0$
+\end_inset
+
+.
+ To find out, we employ linearization: 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\frac{dk_{t}'}{dk_{t}} & \frac{dk_{t}'}{dL_{t}}\\
+\frac{dL_{t}'}{dk_{t}} & \frac{dL_{t}'}{dL_{t}}
+\end{array}\right]=\left[\begin{array}{cc}
+N-n+bL_{t} & bk_{t}\\
+0 & n-2bL_{t}
+\end{array}\right]=\left[\begin{array}{cc}
+N & bk_{t}\\
+0 & -n
+\end{array}\right]
+\]
+
+\end_inset
+
+To look for the eigenvalue, set the determinant to zero at the fixed point
+ 
+\begin_inset Formula $(k_{t},L_{t}=\frac{n}{b})$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+det\left[\begin{array}{cc}
+N-\lambda & bk_{t}\\
+0 & -n-\lambda
+\end{array}\right]=0
+\]
+
+\end_inset
+
+which gives: 
+\begin_inset Formula 
+\[
+(N-\lambda)(-n-\lambda)=0;(N-\lambda)(n+\lambda)=0
+\]
+
+\end_inset
+
+Then, we have two eigenvalues 
+\begin_inset Formula $\lambda_{1}=N$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}=-n$
+\end_inset
+
+.
+ In the other word, depending on the signs of 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $-n$
+\end_inset
+
+, we will have either saddle, unstable, stable node locally around the steady
+ state (fixed point).
+ These are all hyperbolic points, so according to the 
+\shape italic
+Hartman-Grobman Theory
+\shape default
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+For more detailed discussion on this, please refer to page 156 in Strogatz.
+\end_layout
+
+\end_inset
+
+, our use of linearization to determine the stability of steady state is
+ justified.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Remark
+\shape default
+: Even though theoretically we can take any value for the pair 
+\begin_inset Formula $(N,n)$
+\end_inset
+
+ as long as 
+\begin_inset Formula $N\neq0$
+\end_inset
+
+, we would typically want to take both as positive in reality.
+ If one recalls the definition from an earlier section, the variable 
+\begin_inset Formula $n$
+\end_inset
+
+ represents population/labour growth rate, which has the range 
+\begin_inset Formula $0\leq\frac{L_{t}'}{L_{t}}\leq n-bL_{t}$
+\end_inset
+
+.
+ This range confirms what we are observing in the real world.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+For more intuitive discussion on this claim, please read 
+\begin_inset CommandInset href
+LatexCommand href
+name "this"
+target "https://www.scientificamerican.com/article/global-population-growth-is-slowing-down-heres-one-reason-why/"
+literal "false"
+
+\end_inset
+
+ excellent article by the scientific american.
+\end_layout
+
+\end_inset
+
+ With this observation, this fixed point would be either a stable node or
+ saddle point.
+ 
+\end_layout
+
+\begin_layout Standard
+From system 
+\begin_inset Formula $(*)$
+\end_inset
+
+ from the last section, we can solve for the explicit expression of 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{t}=k_{0}e^{\intop_{0}^{t}(N-\frac{L_{t}'}{L_{t}})dt}=\frac{k_{0}L_{0}e^{Nt}}{L_{t}}(**)
+\]
+
+\end_inset
+
+ However, from the equation we got under the expoential population growth
+ rate assumption: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{t}\prime=(N-n)k_{t}
+\]
+
+\end_inset
+
+We can also solve 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ to have the same expression as 
+\begin_inset Formula $(**)$
+\end_inset
+
+.
+ That is an interesting observation, meaning that even under our new population
+ growth assumption, the path of per-worker capital is still the same.
+ In particular, given the positive initial condition 
+\begin_inset Formula $k_{0}>0;L_{0}>0$
+\end_inset
+
+, we have 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ negatively on the population/labour size 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ at time t.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+That conclusion is fairly intuitive when we draw an analogy with dissolving
+ some fixed amount of particle in increasing larger quantity of solutions
+ (dilution).
+\end_layout
+
+\end_inset
+
+ Figure 3 does a good job illustrating the time path of the population growth
+ under logistic model.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Graphs/55C482BF-29A7-49CE-9FDC4294DAC1FD6C_source.webp
+	width 9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Population growth trend
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+We finish this section can make some simple observations on the relationship
+ between the economic growth (
+\begin_inset Formula $\frac{k_{t}'}{k_{t}})$
+\end_inset
+
+ and net adjusted saving rate (N).
+ For simplicity define 
+\begin_inset Formula $\frac{k_{t}'}{k_{t}}\equiv\gamma_{k_{t}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{L_{t}'}{L_{t}}\equiv\gamma_{L_{t}}$
+\end_inset
+
+.
+ Note that we have the following from the first equation of the system(*):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{t}\prime=\left[N-(n-bL_{t})\right]k_{t}=[N-\frac{L_{t}'}{L_{t}}]k_{t}=[N-\gamma_{L_{t}}]k_{t}
+\]
+
+\end_inset
+
+Rearranging terms to get: 
+\begin_inset Formula 
+\[
+\gamma_{k_{t}}=N-\gamma_{L_{t}}
+\]
+
+\end_inset
+
+With this we have the following:
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $N=0$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{k_{t}}=-\gamma_{L_{t}}<0$
+\end_inset
+
+.
+ The last inequality sign is from the range that is given earlier in the
+ section.
+ Therefore, if 
+\begin_inset Formula $N=0$
+\end_inset
+
+, we will have negative economic growth.
+ However, as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, economic growth would tend to zero.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+We can see from Figure 3 shown above that the population growth tends to
+ flatten out.
+ In the context of logistic population growth model, this happens when the
+ population of a territory/habiat reaches the carry capacity K.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $N<0$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{k_{t}}=N-\gamma_{L_{t}}<0$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $N<0$
+\end_inset
+
+, we will also have negative economic growth.
+ However, as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, economic growth would stay negative.
+ 
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $N\geq n-bL_{0}>0$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{k_{t}}\geq0$
+\end_inset
+
+ for each 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+ .
+ Therefore, in this situation, we will have positive economic growth.
+ 
+\end_layout
+
+\begin_layout Section
+Solow growth model in real life
+\end_layout
+
+\begin_layout Standard
+With all these above being said, one might want very naturally that whether
+ the economic growth in the real life can be predicted to some degree of
+ accuracy by the basic Solow model described above.
+ That is precisely what we are going to investigate in this section.
+ From the expression 
+\begin_inset Formula $(**)$
+\end_inset
+
+ that we obtained in the previous section, we see that the value 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ will increase as the value of 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ increases.
+ However, as 
+\begin_inset Formula $N_{t}\equiv sA-𝛿$
+\end_inset
+
+, we can derive that the value 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ increases as saving's rate (
+\begin_inset Formula $s)$
+\end_inset
+
+ increases.
+ In the same expression, we also see that as the quantity 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ increases, the value 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ would decrease.
+ Equivalently, we can say that the value 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ decreases as the population growth rate 
+\begin_inset Formula $n$
+\end_inset
+
+ increases.
+ Recall that at the very beginning, we assumed that we are using so-called
+ 
+\series bold
+AK Technology production function
+\series default
+ (i.e.
+ 
+\begin_inset Formula $Y_{t}=F(K_{t})=AK_{t}$
+\end_inset
+
+).
+ Since 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ in this equation is proportional to 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ would also have the same relationship with respect to saving's rate (
+\begin_inset Formula $s)$
+\end_inset
+
+ and population growth rate 
+\begin_inset Formula $(n)$
+\end_inset
+
+.
+ In summary: 
+\end_layout
+
+\begin_layout Itemize
+Income 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ (therefore income per capita) is 
+\series bold
+increasing
+\series default
+ in the saving's rate
+\end_layout
+
+\begin_layout Itemize
+Income 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ (therefore income per capita) is 
+\series bold
+decreasing
+\series default
+ in the population growth rate
+\end_layout
+
+\begin_layout Standard
+The above two relationships given by the Solow model are what we are going
+ to test on the real-life dataset.
+ Before jumping into the testing, there is one remark to be made regarding
+ to the saving's rate (
+\begin_inset Formula $s)$
+\end_inset
+
+: due to the difficulties that I encountered in getting saving's rate 
+\begin_inset Formula $(s)$
+\end_inset
+
+ statistics for different countries online, this parameter would be replaced
+ by the percentage of GDP a country spends in investment.
+ In fact, this choice is justified as it has been shown 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+One of the examples is 
+\begin_inset CommandInset href
+LatexCommand href
+name "this paper"
+target "https://www.jstor.org/stable/2117526"
+literal "false"
+
+\end_inset
+
+ written by Marianne Baxter and Mario J.
+ Crucini published on The American Economic Review in 1993
+\end_layout
+
+\end_inset
+
+that national saving and investment rates are highly positively correlated
+ in virtually all countries.
+ 
+\end_layout
+
+\begin_layout Standard
+The data that I am going to use comes from 
+\begin_inset CommandInset href
+LatexCommand href
+name "this website"
+target "https://data.oecd.org/gdp/gross-domestic-product-gdp.htm#indicator-chart"
+literal "false"
+
+\end_inset
+
+ and I am investigating the yearly data from 2001-2019 for 
+\begin_inset CommandInset href
+LatexCommand href
+name "27 current European Union member states"
+target "https://european-union.europa.eu/principles-countries-history/country-profiles_en"
+literal "false"
+
+\end_inset
+
+.
+ Firstly, I plotted Average percentage of country's GDP spent on investment
+ over the 19 years vs Average GDP per capita over the 19 years (on the left).
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Graphs/GDP_vs_Percent_Invest.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Graphs/GDP_vs_POP_Growth.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ From the graph, we can see the points follow approximately the prediction
+ given by the model in that there is a weak positive correlation between
+ the percentage of GDP spent in investment and GDP per capita in this time
+ period if we just exclude some outliers such as Luxembourg.
+ Then secondly, I plotted Average population growth rate over the 19 years
+ vs.
+ Average GDP per capita over the 19 years (on the right).
+ 
+\end_layout
+
+\begin_layout Standard
+As one can see from the line fitted in the graph, we have exactly the reverse
+ as what the model would predict: we see higher GDP per capita for countries
+ that have the most rapid population growth rate.
+ Even though this situation is not completely unexpected especially given
+ the simplicity of the model that we investigated here, we would at least
+ expect that the model gives the approximately correct qualitative predictions,
+ which once again doesn't seem to be the case for the second assumption/plot.
+ In the next section, I will attempt to give some plausible explanations
+ into why this seemingly “incorrect” conclusion raised.
+ 
+\end_layout
+
+\begin_layout Section
+Limitations of the simple Solow growth model
+\end_layout
+
+\begin_layout Standard
+In this section, I will attempt to analyze why especially the second graph
+ produced seemingly completely incorrect conclusions with respect to the
+ model prediction.
+ Firstly, this discrepancy may stem from the fact that we used population
+ growth rate data instead of labour population growth rate data.
+ The reason why I chose to use general population growth data here is due
+ to the scarcity of the statistics on labour population growth rate as well
+ as the assumption that we used throughout this report that labour population
+ and general population can be considered the same.
+ It is not unimaginable that a country's labour force grows slower than
+ that country's population growth due to factors such as aging population
+ accompanied by better healthcare.
+ That is actually the case for the US economy where during the next 10 years
+ the labour force is projected to grow 0.5 percent annually, slower than
+ the 0.8-percent annual growth projected for the population.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For more details, please consult 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://www.bls.gov/opub/mlr/2021/article/projections-overview-and-highlights-2020-30.htm#:~:text=In%20recent%20decades%2C%20the%20U.S.,growth%20projected%20for%20the%20population."
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Therefore, it is entirely possible in this context that countries such
+ as Luxembourg experiences slower labour population growth while having
+ the highest general percentage of population growth over the last twenty
+ years.
+ Therefore, the assumptions that we had about labour population = general
+ population might have to be reconsidered if we are to seek a more reliable
+ and accurate result from the model.
+ 
+\end_layout
+
+\begin_layout Standard
+Secondly, Solow's growth model is established on the theory of a closed
+ economy (as indicated in the second section), which simply means that a
+ group of nations does not have any kind of relationship.
+ In the case that we are considering here about 27 current EU member states,
+ this assumption could not have been more inaccurate.
+ One of the defining characteristics of the European Union is that these
+ 27 member states form an Economic Union, meaning that the member states
+ have both common policies on product regulation, freedom of movement of
+ goods, services and the factors of production (capital and labour) and
+ a common external trade policy.
+ Therefore, just on the contrary of the assumption, these 27 countries considere
+d might just have closer economic ties with each other than any other countries
+ in the world.
+ On this basis, I would imagine that if we do the same thing on more isolated
+ economies such as these in sub-Sahara Africa, we would get closer results
+ to the prediction than what we currently have.
+ However, just to be fair to Solow, when he first proposed his model back
+ in the 1950s, a time that largely predated the creation of international
+ trade associations such as WTO (1995), he probably hardly imagined that
+ the global economy nowadays would be so closely intertwined.
+ 
+\end_layout
+
+\begin_layout Standard
+Thirdly, in the third assumption that we presented in the second section,
+ we have the following equation: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{t}\prime=sY_{t}-𝛿K_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Implicitly, this equation doesn't differentiate between human capitals (skills
+ acquired through schooling, training, practice, and socialization) and
+ physical capital (tools, machinery, structures employed by human beings
+ as means of production).
+ As their names suggest, these two kinds of capitals are very different
+ hence it would be extremely misleading to model the depreciation of both
+ using a single 
+\begin_inset Formula $δ$
+\end_inset
+
+ .
+ Sometimes physical capital can be lost or damaged in ways that human capitals
+ cannot: as long as a company manages to retain its personnel, the company's
+ investment in human capital would be secure since the human capital lies
+ in personnel's capabilities and skills; on the other hand, even if a company
+ manages to keep its machinery, they might be subjected to damage or lost
+ hence replacement.
+ The difference that I just mentioned is one of the many differences between
+ human and physical capital.
+ The key takeaway is that not differentiating between those two would in
+ some ways make this model impractical.
+ 
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+As we see from the last section, there are severe limitations to the Solow
+ growth model, which might explain partially the discrepancies we observe
+ when plotting the real world data.
+ Admittedly, we can add many further terms to the existing Solow model in
+ the hope of capturing as many variables as possible while sticking to realistic
+ assumptions.
+ However, since economics is such an inherently complex and unpredictable
+ subject, there will never be a perfect model.
+ I think the lesson that we can take from analyzing this model is that the
+ point of models such as that of Solow's is not to capture accurately every
+ single detail of the real world; instead, the main point is for it to provide
+ us with some qualitative understandings of the complex world.
+ 
+\end_layout
+
+\end_body
+\end_document
